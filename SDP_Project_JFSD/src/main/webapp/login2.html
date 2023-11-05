@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style2.css" />
+	<title>LOGIN PAGE</title>
+	<script src="login.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<section class="sub-header">
+		<nav>
+			<a href="home.html"><img src="images/logo.png"></a>
+		</nav>
+	</section>
+	<center><h1>LOGIN</h1></center>
+	<div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="t1" name="name" placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="t3" name="password" maxlength="8">
+                </div>
+                <a href="login.html">Don't have account?</a>
+            </div>
+            <div class="row">
+                <input type="submit" value="Login" onclick="submitForm()">
+            </div>  
+        </div>  
+        <script>
+        function submitForm() {
+            // You can add your form submission logic here
+            // For example, you can use JavaScript to send the form data to a server
+            // After processing, you can then navigate to another page if needed.
+            
+            // Redirect to another page (e.g., "success.html")
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+
+</html>

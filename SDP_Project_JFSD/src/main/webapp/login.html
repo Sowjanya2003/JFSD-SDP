@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/style2.css" />
+	<title>REGISTER PAGE</title>
+	<script src="login.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<section class="sub-header">
+		<nav>
+			<a href="home.html"><img src="images/logo.png"></a>
+		</nav>
+	</section>
+	<center><h1>Registration</h1></center>
+	<div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="t1" name="name" placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile Number:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="t2" name="mobile" placeholder="only 10 digits are allowed">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="t3" name="password" maxlength="8">
+                </div>
+                <a href="login2.html">Already had account?</a>
+            </div>
+            <div class="row">
+                <input type="submit" value="Register" onclick="registration()">
+            </div>  
+        </div>  
+</body>
+
+</html>

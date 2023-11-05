@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>SERVICES</title>
+</head>
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<style>
+	* {
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+
+	:root {
+		--purple: hsl(240, 80%, 89%);
+		--pink: hsl(0, 59%, 94%);
+		--light-bg: hsl(204, 37%, 92%);
+		--light-gray-bg: hsl(0, 0%, 94%);
+		--white: hsl(0, 0%, 100%);
+		--dark: hsl(0, 0%, 7%);
+		--text-gray: hsl(0, 0%, 30%);
+	}
+
+	body {
+		background: var(--light-bg);
+		font-family: "Space Grotesk", sans-serif;
+		color: var(--dark);
+	}
+
+	h3 {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+
+	p {
+		font-size: 1em;
+		line-height: 1.7;
+		font-weight: 300;
+		color: var(--text-gray);
+	}
+
+	.description {
+		white-space: wrap;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.wrap {
+		display: flex;
+		justify: space-between;
+		align-items: stretch;
+		width: 100%;
+		gap: 24px;
+		padding: 24px;
+		flex-wrap: wrap;
+	}
+
+	.box {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		position: relative;
+		padding: 24px;
+		background: #fff;
+	}
+
+	.box-top {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		gap: 12px;
+		margin-bottom: 36px;
+	}
+
+	.box-image {
+		width: 100%;
+		height: 360px;
+		object-fit: cover;
+		object-position: 50% 20%;
+	}
+
+	.title-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.box-title {
+		border-left: 3px solid var(--purple);
+		padding-left: 12px;
+	}
+
+	.user-follow-info {
+		color: hsl(0, 0%, 60%);
+	}
+
+	.button {
+		display: block;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		margin-top: auto;
+		padding: 16px;
+		color: #000;
+		background: transparent;
+		box-shadow: 0px 0px 0px 1px black inset;
+		transition: background 0.4s ease;
+	}
+
+	.button:hover {
+		background: var(--purple);
+	}
+
+	.fill-one {
+		background: var(--light-bg);
+	}
+
+	.fill-two {
+		background: var(--pink);
+	}
+
+	/* RESPONSIVE QUERIES */
+
+	@media (min-width: 320px) {
+		.title-flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: start;
+		}
+
+		.user-follow-info {
+			margin-top: 6px;
+		}
+	}
+
+	@media (min-width: 460px) {
+		.title-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: start;
+		}
+
+		.user-follow-info {
+			margin-top: 6px;
+		}
+	}
+
+	@media (min-width: 640px) {
+		.box {
+			flex-basis: calc(50% - 12px);
+		}
+
+		.title-flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: start;
+		}
+
+		.user-follow-info {
+			margin-top: 6px;
+		}
+	}
+
+	@media (min-width: 840px) {
+		.title-flex {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: start;
+		}
+
+		.user-follow-info {
+			margin-top: 6px;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		.box {
+			flex-basis: calc(33.3% - 16px);
+		}
+
+		.title-flex {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: start;
+		}
+
+		.user-follow-info {
+			margin-top: 6px;
+		}
+	}
+
+	@media (min-width: 1100px) {
+		.box {
+			flex-basis: calc(25% - 18px);
+		}
+	}
+
+	nav {
+		display: flex;
+		padding: 2% 6%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	nav img {
+		width: 150px;
+	}
+
+	.nav-links {
+		flex: 1;
+		text-align: right;
+	}
+
+	.nav-links ul li {
+		list-style: none;
+		display: inline-block;
+		padding: 8px 12px;
+		position: relative;
+	}
+
+	.nav-links ul li a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+		font-size: 13px;
+	}
+
+	.nav-links ul li::after {
+		content: '';
+		width: 0%;
+		height: 2px;
+		background: rgb(255, 0, 0);
+		display: block;
+		margin: auto;
+		transition: 0.5s;
+	}
+
+	.nav-links ul li:hover::after {
+		width: 100%;
+	}
+</style>
+
+<body>
+	<nav>
+		<a href="mainhome.html"><img src="images/logo.png"></a>
+		<div class="nav-links">
+			<ul>
+				<li><a href="home.html"><b>HOME</b></a></li>
+				<li><a href="about.html"><b>ABOUT</b></a></li>
+				<li><a href="services.html"><b>SERVICES</b></a></li>
+				<li><a href="contact.html"><b>CONTACT</b></a></li>
+				<li><a href="feedback.html"><b>FEEDBACK</b></a></li>
+				<li><a href="index.html"><b>LOGOUT</b></a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="wrap">
+		<br><br><br><br><br><br><br><br><br>
+		<div class="box">
+			<div class="box-top">
+				<img class="box-image"
+					src="https://assets.sentinelassam.com/h-upload/2022/03/19/326510-rashifal-decision-23.webp"
+					alt="Girl Eating Pizza">
+				<div class="title-flex">
+					<h3 class="box-title">Horoscope</h3>
+
+				</div>
+				<p class="description">A horoscope is a personalized astrological forecast based on your birth date,
+					time, and location. It provides insights into your personality, life events, and daily, weekly,
+					monthly, or yearly predictions.</p>
+			</div>
+			<a href="horoscope.html" class="button">Click Here</a>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="box">
+			<div class="box-top">
+				<img class="box-image" src="https://i.pinimg.com/1200x/28/84/17/288417594877c29d61d3e9ec2c102934.jpg"
+					alt="Girl Eating Pizza">
+				<div class="title-flex">
+					<h3 class="box-title">Talk to an Astrologer</h3>
+				</div>
+				<p class="description">Speak with an experienced astrologer who can provide you with real-time answers
+					to your queries, in-depth discussions about your birth chart, or insights into various aspects of
+					your life and destiny.</p>
+			</div>
+			<a href="astrologer.html" class="button">Click Here</a>
+		</div>
+	<br><br><br><br><br><br>
+		<div class="box">
+			<div class="box-top">
+				<img class="box-image"
+					src="https://www.bergerpaints.com/blog/wp-content/uploads/2023/08/shutterstock_87065867.jpg"
+					alt="Girl Eating Pizza">
+				<div class="title-flex">
+					<h3 class="box-title">Book a Pooja</h3>
+
+				</div>
+				<p class="description">Book a pooja is a service that allows you to schedule and participate in
+					traditional Hindu rituals, known as pujas, conducted by experienced priests.</p>
+			</div>
+			<a href="pooja.html" class="button">Click Here</a>
+		</div>
+	</div>
+</body>
+
+</html>
