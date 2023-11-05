@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Service Details</title>
+	<script type="text/javascript" src="adminpooja.js"></script>
+</head>
+<body bgcolor="pink">
+	<center>
+	<h3>Pooja Details</h3>
+	<div>
+		<table>
+			<tr>
+				<td style="width: 200px">ID :</td>
+				<td><input type="text" id="t1"/></td>
+			</tr>
+				<td style="width: 200px">NAME :</td>
+				<td><input type="text" id="t2"/></td>
+			</tr>
+			<tr>
+				<td style="width: 200px">EMAIL :</td>
+				<td><input type="text" id="t3"/></td>
+			</tr>
+			<tr>
+				<td style="width: 200px">PHONE NUMBER :</td>
+				<td><input type="text" id="t4"/></td>
+			</tr>
+			<tr>
+				<td style="width: 200px">POOJA NAME :</td>
+				<td><input type="text" id="t5"/></td>
+			</tr>
+			<tr>
+				<td style="width: 200px">EVENT DATE :</td>
+				<td><input type="date" id="t6"/></td>
+			</tr>
+			<tr>
+				<td style="width: 200px">EVENT TIME :</td>
+				<td><input type="time" id="t7"/></td>
+			</tr>
+			<tr>
+				<td><button onclick="register()">Add</button></td>
+				<td><button onclick="update()">Update</button></td>
+				<td><button onclick="deleteData()">Delete</button></td>
+				<td><button onclick="view()">View Data</button></td>
+			</tr>
+			</tr>
+			<tr>
+				<td></td>
+				<td><label id="l1"></label></td>
+			</tr>
+		</table></br>
+		<div id="viewData"></div>
+	</div>
+	</center>
+</body>
+</html>

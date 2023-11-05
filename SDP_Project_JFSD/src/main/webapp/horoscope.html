@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		.card-container {
+			display: flex;
+			justify-content: space-around;
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.card {
+			width: 250px;
+			height: 350px;
+			perspective: 1000px;
+		}
+
+		.card-inner {
+			width: 100%;
+			height: 100%;
+			transition: transform 0.5s;
+			transform-style: preserve-3d;
+		}
+
+		.card:hover .card-inner {
+			transform: rotateY(180deg);
+		}
+
+		.card-front,
+		.card-back {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			backface-visibility: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+		}
+
+		.card-front {
+			background-color: #007bff;
+			color: white;
+		}
+
+		.card-back {
+			background-color: rgb(190, 206, 176);
+			transform: rotateY(180deg);
+			padding: 20px;
+			/* Add some padding for better readability */
+			text-align: justify;
+			/* Justify the text */
+			font-family: Arial, sans-serif;
+			/* Set your preferred font family */
+			font-size: 16px;
+			/* Set your preferred font size */
+			line-height: 1.5;
+			/* Set preferred line height for readability */
+			color: #333;
+			/* Set your preferred text color */
+		}
+
+		.card-front img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			/* Optional - maintains aspect ratio */
+		}
+
+		nav {
+			display: flex;
+			padding: 2% 6%;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		nav img {
+			width: 150px;
+		}
+
+		.nav-links {
+			flex: 1;
+			text-align: right;
+		}
+
+		.nav-links ul li {
+			list-style: none;
+			display: inline-block;
+			padding: 8px 12px;
+			position: relative;
+		}
+
+		.nav-links ul li a {
+			color: rgb(0, 0, 0);
+			text-decoration: none;
+			font-size: 13px;
+		}
+
+		.nav-links ul li::after {
+			content: '';
+			width: 0%;
+			height: 2px;
+			background: rgb(239, 27, 27);
+			display: block;
+			margin: auto;
+			transition: 0.5s;
+		}
+
+		.nav-links ul li:hover::after {
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body
+	style="background-image: url('https://c4.wallpaperflare.com/wallpaper/780/572/955/pastel-pink-morning-blur-wallpaper-preview.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+	<nav>
+		<a href="mainhome.html"><img src="images/logo.png"></a>
+		<div class="nav-links">
+			<ul>
+				<li><a href="home.html"><b>HOME</b></a></li>
+				<li><a href="about.html"><b>ABOUT</b></a></li>
+				<li><a href="services.html"><b>SERVICES</b></a></li>
+				<li><a href="contact.html"><b>CONTACT</b></a></li>
+				<li><a href="feedback.html"><b>FEEDBACK</b></a></li>
+				<li><a href="index.html"><b>LOGOUT</b></a></li>
+			</ul>
+		</div>
+	</nav>
+	<center>
+		<h1>ZODIAC SIGNS AND HOROSCOPE</h1>
+	</center>
+	<div class="card-container">
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/05/USAT/9466cf20-57a9-4c03-9910-874faa7d459d-Aries.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 1 Image">
+
+				</div>
+				<div class="card-back">
+					Work will be productive as you finish everything you had committed to. You may need to concentrate
+					on contracts and paperwork related to partnerships. External investments for the business will
+					materialize. Your family will offer support and understanding. Friends might feel neglected due to
+					your irregular working hours, and you may struggle to meet their expectations.
+
+					Your Lucky color is Pink. Your Lucky number is 2.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/06/USAT/0b778539-2377-4257-8611-641aeb71f27b-Taurus.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 2 Image">
+				</div>
+				<div class="card-back">
+					Work may progress slowly due to a creative block or obstacles caused by others' decisions. Clarity
+					will emerge in the second half of the day. Your family life will be steady, but you might withdraw
+					socially due to physical fatigue. Be mindful of your eating habits. You might consider buying an
+					asset today, but it won't break the bank. Your Lucky color is Green. Your Lucky number is 48.
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/07/USAT/82b83b8c-1b0b-4655-93ce-d2016c4bd70a-Gemini.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 3 Image">
+				</div>
+				<div class="card-back">
+					Concentrate on one task at a time. Your work will become more stable, and you'll find clarity on
+					pending issues. Try to avoid conflicts with a senior colleague at work. Your family life will be
+					steady, but socially, you'll be quite busy with multiple invitations. There's a chance you'll
+					reunite with an old friend today. This meeting will bring back cherished memories you shared with
+					them.
+					Your Lucky color is Burgundy. Your Lucky number is 43.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/06/USAT/fd94e5d0-a585-4f27-a3b7-3f1a2553555e-Cancer.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 4 Image">
+				</div>
+				<div class="card-back">
+					Today is a day for relaxation and unwinding because no matter how hard you try, you won't make much
+					progress. The odds may not be in your favor, so it's best not to take on too much. Focus on your
+					health and spend time with people who can inspire or uplift you. Don't let the negative energies of
+					the day shake your inner strength.
+
+					Your Lucky color is Mauve. Your Lucky number is 23.
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="card-container">
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/11/USAT/92784ead-4214-42cc-a326-df3e2eba4d5c-Leo.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 5 Image">
+				</div>
+				<div class="card-back">
+					Your work will gain momentum, and you'll make good progress with pending tasks. An unexpected
+					last-minute meeting might be scheduled, bringing some important news. It's essential to pay
+					attention to your health, particularly concerning your lower abdomen. Your family life will be
+					steady, but you may decide to cancel social plans and opt for some alone time instead.
+
+					Your Lucky color is Peach. Your Lucky number is 1.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/13/USAT/658444cd-e5d6-4ebb-891a-a46223e7c465-Virgo.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 6 Image">
+				</div>
+				<div class="card-back">
+					Your sense of humor can inspire someone to cultivate this skill, showing them that happiness isn't
+					about owning things but is within us. Better financial circumstances will make it easier for you to
+					make significant purchases. Enjoy some quality time with your family. Shopping and other activities
+					will keep you occupied. It seems that your marriage will reach new heights today. Your Lucky color
+					is White. Your Lucky number is 40.
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/04/USAT/ed03682a-2b5d-4885-95d5-322fd9a2df62-Libra.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 7 Image">
+				</div>
+				<div class="card-back">
+					You'll have a lot of confidence and energy today. Your financial situation may improve through
+					speculation or unexpected gains. Believe it or not, someone around you is observing you closely and
+					sees you as a role model, so make sure to do commendable things that enhance your reputation. Your
+					ability to learn new things will be remarkable. It's a day when nothing will be planned until the
+					last moment.
+
+					Your Lucky color is Blue. Your Lucky number is 43.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/04/USAT/1f3dd28e-0265-4e54-970a-e17a7e5a22ca-Scorpio.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 8 Image">
+				</div>
+				<div class="card-back">
+					You might find yourself dealing with unwanted thoughts. Engage in physical exercise to keep your
+					mind occupied, as an idle mind can lead to negative thinking. Be cautious when considering
+					investment schemes presented to you today. Your dominating attitude within your family may lead to
+					unnecessary arguments and criticism. It's going to be a very busy and social day for you, with
+					people seeking your advice and readily agreeing with whatever you say.
+
+					Your Lucky color is Purple. Your Lucky number is 5.
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="card-container">
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/04/USAT/1f3a896f-7c0d-4fc3-a395-a605d47296ba-Sagittarius.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 9 Image">
+				</div>
+				<div class="card-back">
+					It's a day that will keep a smile on your face, and even strangers will feel like old friends.
+					However, be cautious of unrealistic plans that might strain your finances. Your loved one may expect
+					both your time and gifts today. You possess the capability to achieve great things, so seize the
+					opportunities that come your way. Someone from your past is likely to get in touch, making it a
+					memorable day. Everything appears harmonious in your married life today, bringing happiness to the
+					forefront.
+
+					Your Lucky color is Brown. Your Lucky number is 34.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/04/USAT/39a515e9-ae69-4cc8-838f-0aa0e84c17f5-Capricorn.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 10 Image">
+				</div>
+				<div class="card-back">
+					Steer clear of stress and tension, as they can affect your health. Be mindful of overspending on
+					entertainment or cosmetic enhancements. Avoid meddling in your wife's affairs, as it might upset
+					her; always seek her permission to prevent arguments. Your love life is in for a fantastic day, but
+					remember not to take your partner for granted. Be cautious, as there may be hidden enemies eager to
+					spread rumors about you.
+					Your Lucky color is Olive. Your Lucky number is 44.
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/10/USAT/32b646f3-6c54-4f2a-9c7d-7af2549ea8bd-Aquarius.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 11 Image">
+				</div>
+				<div class="card-back">
+					Your health may not be at its best today, so take care of yourself. Be cautious about overspending
+					on others and keep an eye on your finances. Spend time with friends who are positive and supportive.
+					In the realm of romance, things are a bit complicated today, so ensure that you receive proper
+					credit for your efforts. You'll be brimming with great ideas, and your chosen activities could yield
+					unexpected gains.
+
+					Your Lucky color is Maroon. Your Lucky number is 12.
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-inner">
+				<div class="card-front">
+					<img src="https://www.usatoday.com/gcdn/presto/2022/10/10/USAT/4a92642d-bd69-4842-99a5-1fa58597cc7a-Pisces.jpg?width=1200&disable=upscale&format=pjpg&auto=webp"
+						alt="Card 12 Image">
+				</div>
+				<div class="card-back">
+					Your spouse's cheerful mood could bring joy to your day. Collaborate closely to create a harmonious
+					atmosphere at home. Be cautious of one-sided infatuation, as it can undermine your happiness.
+					Staying in touch with influential individuals will help you stay informed. Be mindful of your
+					actions and words, as those in positions of authority may be less forgiving if you engage in
+					deceitful behavior. Your partner's enduring love and support will strengthen the bond between the
+					two of you.Your Lucky color is Violet. Your Lucky number is 10
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
